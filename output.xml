@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.1 (Python 3.10.7 on win32)" generated="20221127 21:55:39.570" rpa="false" schemaversion="3">
+<suite id="s1" name="CT1" source="c:\Users\Inna_D\Desktop\Devoir1\Scripts\CT1.robot">
+<test id="s1-t1" name="Test positive Login" line="15">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${url}</arg>
+<arg>${Browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20221127 21:55:39.682" level="INFO">Opening browser 'Chrome' to base url 'https://practicetestautomation.com/practice-test-login/'.</msg>
+<status status="PASS" starttime="20221127 21:55:39.681" endtime="20221127 21:55:41.605"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20221127 21:55:41.605" endtime="20221127 21:55:41.717"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${SLEEP}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20221127 21:55:43.721" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20221127 21:55:41.718" endtime="20221127 21:55:43.721"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${txt_Username}</arg>
+<arg>${vUsername}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221127 21:55:43.722" level="INFO">Typing text 'student' into text field 'username'.</msg>
+<status status="PASS" starttime="20221127 21:55:43.721" endtime="20221127 21:55:43.761"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>${txt_Password}</arg>
+<arg>${vPassword}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20221127 21:55:43.762" level="INFO">Typing password into text field 'password'.</msg>
+<msg timestamp="20221127 21:55:43.782" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20221127 21:55:43.801" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20221127 21:55:43.761" endtime="20221127 21:55:43.801"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${btn_Submit}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20221127 21:55:43.802" level="INFO">Clicking button 'submit'.</msg>
+<status status="PASS" starttime="20221127 21:55:43.801" endtime="20221127 21:55:44.739"/>
+</kw>
+<kw name="Location Should Contain" library="SeleniumLibrary">
+<arg>practicetestautomation.com/logged-in-successfully/</arg>
+<doc>Verifies that the current URL contains ``expected``.</doc>
+<msg timestamp="20221127 21:55:44.741" level="INFO">Current location contains 'practicetestautomation.com/logged-in-successfully/'.</msg>
+<status status="PASS" starttime="20221127 21:55:44.739" endtime="20221127 21:55:44.741"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${SLEEP}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20221127 21:55:46.752" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20221127 21:55:44.741" endtime="20221127 21:55:46.753"/>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>${lblTitle2}</arg>
+<arg>Congratulations student. You successfully logged in!</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20221127 21:55:46.779" level="INFO">Element 'xpath://*[contains(text(), 'Congratulations student. You successfully logged in!')]' contains text 'Congratulations student. You successfully logged in!'.</msg>
+<status status="PASS" starttime="20221127 21:55:46.755" endtime="20221127 21:55:46.780"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${btnLogout}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20221127 21:55:46.798" level="INFO">Element 'xpath://a[normalize-space()='Log out']' is displayed.</msg>
+<status status="PASS" starttime="20221127 21:55:46.780" endtime="20221127 21:55:46.799"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20221127 21:55:46.800" endtime="20221127 21:55:48.901"/>
+</kw>
+<status status="PASS" starttime="20221127 21:55:39.681" endtime="20221127 21:55:48.902"/>
+</test>
+<status status="PASS" starttime="20221127 21:55:39.572" endtime="20221127 21:55:48.906"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="CT1">CT1</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
